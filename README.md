@@ -5,5 +5,5 @@ git clone --recurse-submodules git@github.com:yildirimyigit/use_case_crf.git
 
 After cloning, build and run docker with:
 
-- ``` ./build_docker.sh ```
-- ``` ./run_gui.sh ```
+1- ``` ./build_docker.sh ```
+2- ``` ./run_gui.sh ```
