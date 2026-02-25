@@ -1,0 +1,2 @@
+- ./build_docker.sh
+- ./run_gui.sh
