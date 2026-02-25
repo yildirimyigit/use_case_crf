@@ -2,7 +2,6 @@ FROM osrf/ros:humble-desktop
 ENV DEBIAN_FRONTEND=noninteractive
 ENV ROS_DISTRO=humble
 
-# Install common tools, Gazebo, and pre-compiled Universal Robots dependencies
 RUN apt-get update && apt-get install -y \
     git \
     python3-colcon-common-extensions \
@@ -19,7 +18,10 @@ RUN rosdep update || true
 WORKDIR /ros2_ws
 RUN mkdir -p src
 
-# The entrypoint checks if the workspace is built before sourcing it
+# Add ROS and workspace sourcing to .bashrc for any newly attached shells
+RUN echo "source /opt/ros/humble/setup.bash" >> ~/.bashrc && \
+    echo "if [ -f /ros2_ws/install/setup.bash ]; then source /ros2_ws/install/setup.bash; fi" >> ~/.bashrc
+
 RUN echo '#!/bin/bash\n\
 set -e\n\
 source "/opt/ros/humble/setup.bash"\n\
