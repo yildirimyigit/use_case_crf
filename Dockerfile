@@ -4,6 +4,7 @@ ENV ROS_DISTRO=humble
 
 RUN apt-get update && apt-get install -y \
     git \
+    nano \
     python3-colcon-common-extensions \
     python3-vcstool \
     python3-rosdep \
