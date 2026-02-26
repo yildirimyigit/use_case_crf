@@ -14,3 +14,10 @@
 	path = ros2_ws/src/serial
 	url = https://github.com/tylerjw/serial.git
 	branch = ros2
+[submodule "ros2_ws/src/easy_ur_control"]
+	path = ros2_ws/src/easy_ur_control
+	url = https://github.com/idra-lab/easy_ur_control.git
+[submodule "ros2_ws/src/cartesian_controllers"]
+	path = ros2_ws/src/cartesian_controllers
+	url = https://github.com/fzi-forschungszentrum-informatik/cartesian_controllers.git
+	branch = ros2
