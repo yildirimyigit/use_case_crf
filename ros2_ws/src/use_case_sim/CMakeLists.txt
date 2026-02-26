@@ -25,7 +25,7 @@ endif()
 
 install(DIRECTORY
   launch
-  worlds
+  config
   urdf
   rviz
   DESTINATION share/${PROJECT_NAME}

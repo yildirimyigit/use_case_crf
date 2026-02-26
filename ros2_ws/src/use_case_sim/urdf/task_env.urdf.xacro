@@ -72,4 +72,26 @@
   <gazebo reference="table_link"><material>Gazebo/Wood</material></gazebo>
   <gazebo reference="plate_link"><material>Gazebo/DarkGrey</material></gazebo>
 
+  <xacro:include filename="$(find robotiq_description)/urdf/robotiq_2f_85_macro.urdf.xacro"/>
+  
+  <xacro:robotiq_gripper name="RobotiqGripper" prefix="" parent="tool0" include_ros2_control="false">
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+  </xacro:robotiq_gripper>
+
+  <ros2_control name="RobotiqGripperHardware" type="system">
+    <hardware>
+      <plugin>gazebo_ros2_control/GazeboSystem</plugin>
+    </hardware>
+    <joint name="robotiq_85_left_knuckle_joint">
+      <command_interface name="position">
+        <param name="min">0.0</param>
+        <param name="max">0.8</param>
+      </command_interface>
+      <state_interface name="position">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+      <state_interface name="velocity"/>
+    </joint>
+  </ros2_control>
+
 </robot>
