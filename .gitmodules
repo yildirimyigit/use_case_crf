@@ -10,3 +10,7 @@
 	path = ros2_ws/src/robotiq_gripper
 	url = https://github.com/PickNikRobotics/ros2_robotiq_gripper.git
 	branch = main
+[submodule "ros2_ws/src/serial"]
+	path = ros2_ws/src/serial
+	url = https://github.com/tylerjw/serial.git
+	branch = ros2
