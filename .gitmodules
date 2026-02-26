@@ -6,3 +6,7 @@
 	path = ros2_ws/src/Universal_Robots_ROS2_Gazebo_Simulation
 	url = https://github.com/UniversalRobots/Universal_Robots_ROS2_Gazebo_Simulation.git
 	branch = humble
+[submodule "ros2_ws/src/robotiq_gripper"]
+	path = ros2_ws/src/robotiq_gripper
+	url = https://github.com/PickNikRobotics/ros2_robotiq_gripper.git
+	branch = main
