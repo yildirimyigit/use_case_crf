@@ -15,7 +15,7 @@ By default, the container contains under _src_:
 - serial (a dependency for the gripper)
 - easy_ur_control (controllers developed by the IDRA Lab)
 - cartesian_controllers
-as submodules. There is another ROS package _use_case_crf_ for the example scenario.
+as submodules. There is another ROS package _use_case_sim_ for a trivial, example scenario.
 
 Installation
 ---
@@ -27,6 +27,7 @@ git clone --recurse-submodules git@github.com:yildirimyigit/use_case_crf.git
 2- After cloning, build and run docker with:
   - ``` ./build_docker.sh ```
   - ``` ./run_gui.sh ```
+  - (Optional if you want to attach another shell to a running container) ``` ./attach_docker.sh ``` 
 
 3- On the container, run ```ros2 launch use_case_sim task_env.launch.py```.
   - In your first run (after ./run_gui.sh), give Gazebo some time to download the models. There is another bug that I haven't solved yet causes Gazebo to fail only in the first run (any help is appreciated.) It should successfully work in the subsequent launches.
