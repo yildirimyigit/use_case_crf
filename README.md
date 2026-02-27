@@ -15,7 +15,7 @@ By default, the container contains under _src_:
 - serial (a dependency for the gripper)
 - easy_ur_control (controllers developed by the IDRA Lab)
 - cartesian_controllers
-
+as submodules. There is another ROS package _use_case_crf_ for the example scenario.
 
 Installation
 ---
