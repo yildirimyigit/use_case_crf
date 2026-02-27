@@ -1,6 +1,6 @@
 controller_manager:
   ros__parameters:
-    update_rate: 100  # Matches the UR Gazebo simulation rate
+    update_rate: 100
 
     joint_state_broadcaster:
       type: joint_state_broadcaster/JointStateBroadcaster
@@ -9,7 +9,7 @@ controller_manager:
       type: joint_trajectory_controller/JointTrajectoryController
 
     robotiq_gripper_controller:
-      type: position_controllers/GripperActionController
+      type: joint_trajectory_controller/JointTrajectoryController
 
 # The UR10 Arm Controller
 joint_trajectory_controller:
@@ -33,5 +33,13 @@ joint_trajectory_controller:
 # The Robotiq 2F-85 Gripper Controller
 robotiq_gripper_controller:
   ros__parameters:
-    default_root_joint: robotiq_85_left_knuckle_joint
-    joint: robotiq_85_left_knuckle_joint
+    joints:
+      - robotiq_85_left_knuckle_joint
+    command_interfaces:
+      - position
+    state_interfaces:
+      - position
+      - velocity
+    state_publish_rate: 100.0
+    action_monitor_rate: 20.0
+    allow_partial_joints_goal: false
