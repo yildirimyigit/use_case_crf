@@ -13,10 +13,9 @@
       <inertia ixx="0.00005" ixy="0" ixz="0" iyy="0.00005" iyz="0" izz="0.00001"/>
     </inertial>
   </link>
-  
   <gazebo reference="peg_link">
     <material>Gazebo/Blue</material>
-    <mu1>1.0</mu1>
-    <mu2>1.0</mu2>
+    <mu1>10.0</mu1>
+    <mu2>10.0</mu2>
   </gazebo>
 </robot>
